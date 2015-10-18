@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="row">
+<div class="col-sm-10">
+</div>
+</div>
+<div class="row">
+    <form>
+        <div class="col-xs-8">
+            <input id="author_list" class="form-control" placeholder="Authors, e.g. 'Butler Lampson' or 'Butler Lampson, Emin Gün Sirer'.  Or try clicking on nodes." type="text">
+        </div>
+        <div class="col-xs-4">
+            <button id="submit" class="btn btn-success" onclick="author_search($('#author_list').val(), {}, {}); return false;">Search</button>
+        </div>
+    </form>
+</div>
+<div class="row">
+<div class="col-sm-10">
+</div>
+</div>
+<div class="row">
+    <div id="canvas" class="col-md-10 col-md-offset-1">
+    </div>
+</div>
+<script>
+author_setup();
+author_search('Butler Lampson', {}, {});
+</script>
+{% endblock %}
